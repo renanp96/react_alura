@@ -11,7 +11,7 @@ class App extends Component {
     super();
     this.state = {
       notas: [],
-      categorias: [],
+      categorias: ["Trabalho", "Automobilismo"],
     };
   }
 
@@ -37,7 +37,7 @@ class App extends Component {
       <section className="conteudo">
         <FormularioCadastro criarNota={this.criarNota.bind(this)} />
         <main>
-          <ListaDeCategorias/>
+          <ListaDeCategorias categorias={this.state.categorias}/>
           <ListaDeNotas deletarNota={this.deletarNota.bind(this)} notas={this.state.notas} />
         </main>
       </section>
