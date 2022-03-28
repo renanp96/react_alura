@@ -2,17 +2,22 @@ import React, { Component } from "react";
 import "./estilo.css";
 
 class ListaDeCategorias extends Component {
-  constructor(){
+  constructor() {
     super();
-    this.state = {categorias:[]}
+    this.state = { categorias: [] };
+    this._novasCategorias = this._novasCategorias.bind(this);
   }
 
-  componentDidMount(){
-    this.props.categorias.inscrever(this._novasCategorias.bind(this));
+  componentDidMount() {
+    this.props.categorias.inscrever(this._novasCategorias);
   }
 
-  _novasCategorias(categorias){
-    this.setState({...this.state, categorias});
+  componentWillUnmount() {
+    this.props.categorias.inscrever(this._novasCategorias);
+  }
+
+  _novasCategorias(categorias) {
+    this.setState({ ...this.state, categorias });
   }
 
   _handleEventoInput(e) {

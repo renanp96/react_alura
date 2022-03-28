@@ -1,23 +1,25 @@
 class Categorias {
-    constructor(){
-        this.categorias = [];
-        this._inscritos = [];
-    }
+  constructor() {
+    this.categorias = [];
+    this._inscritos = [];
+  }
 
-    inscrever(func){
-        this._inscritos.push(func)
-    }
+  inscrever(func) {
+    this._inscritos.push(func);
+  }
 
-    notificar(){
-        this._inscritos.forEach(func => func(this.categorias));
-    }
+  notificar() {
+    this._inscritos.forEach((func) => func(this.categorias));
+  }
 
-    desincrever(){}
+  desinscrever(func) {
+    this._inscritos = this._inscritos.filter((f) => f !== func);
+  }
 
-    adicionarCategoria(novaCategoria){
-        this.categorias.push(novaCategoria);
-        this.notificar();
-    }
+  adicionarCategoria(novaCategoria) {
+    this.categorias.push(novaCategoria);
+    this.notificar();
+  }
 }
 
 export default Categorias;
