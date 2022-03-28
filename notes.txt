@@ -1,0 +1,5 @@
+Application State(Estado da Aplicação):{
+    O 'state' deve ser utilizado para guardar informações mutaveis em sua aplicação React,
+    ao guardar essas informações, o React cuidada de fazer uma nova rendenização do componente
+    e seus 'filhos', e as informações serão atualizadas no DOM
+}
