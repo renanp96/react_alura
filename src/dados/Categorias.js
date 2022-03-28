@@ -16,6 +16,7 @@ class Categorias {
 
     adicionarCategoria(novaCategoria){
         this.categorias.push(novaCategoria);
+        this.notificar();
     }
 }
 

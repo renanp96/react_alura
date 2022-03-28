@@ -3,3 +3,10 @@ Application State(Estado da Aplicação):{
     ao guardar essas informações, o React cuidada de fazer uma nova rendenização do componente
     e seus 'filhos', e as informações serão atualizadas no DOM
 }
+
+componentDidMount:{
+    Método utilizado assim que o componente é criado e instanciado, dentro desse metodo que deve-se iniciar 
+    chamadas para API ou execução de codigo que possui efeito colateral.
+    Neste momento o ciclo de vida do React nos permite chamar a função "setState" e dessa maneira podemos
+    atualizar o componente de retorno de uma chama para API por exemplo.
+}
